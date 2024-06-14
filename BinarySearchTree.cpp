@@ -37,5 +37,37 @@ public:
         Node* parent = NULL;
         Node* currentNode = NULL;
         search(element, parent, currentNode);
+
+        if (parent == NULL)
+        {
+            ROOT = newNode;
+            return;
+        }
+
+        if (element < parent->info)
+        {
+            parent->leftchild = newNode;
+        }
+        else if (element > parent->info)
+        {
+            parent->rightchild = newNode;
+        }
     }
+
+     void search(string element, Node*& parent, Node*& currentNode)
+    {
+        currentNode = ROOT;
+        parent = NULL;
+        while ((currentNode != NULL) && (currentNode->info) != element)
+        {
+            parent = currentNode;
+            if (element < currentNode->info)
+                currentNode = currentNode->leftchild;
+            else
+                currentNode = currentNode->rightchild;
+        }
+    }
+
 };
+
+ 
