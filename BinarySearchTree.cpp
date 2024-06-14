@@ -113,16 +113,17 @@ public:
     }
 };
 
-int main() {
+int main() 
+{
     BinaryTree obj;
     while (true)
     {
         cout << "\nMenu" << endl;
         cout << "1. Implement insert operation" << endl;
-        cout << "2. perfom inorder traversal" << endl;
-        cout << "3. perfom preorder traversal" << endl;
-        cout << "4. perfom postorder traversal" << endl;
-        cout << "5. exit" << endl
+        cout << "2. perform inorder traversal" << endl;
+        cout << "3. perform preorder traversal" << endl;
+        cout << "4. perform postorder traversal" << endl;
+        cout << "5. exit" << endl;
         cout << "Enter your choice (1-5) : ";
 
         char ch;
